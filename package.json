@@ -1,0 +1,30 @@
+{
+  "name": "ytarchiverewrite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "buildForServer": "npx tsc && copy package.json dist\\package.json && copy package-lock.json dist\\package-lock.json && del \"dist\\index.js\" && ren dist\\indexProduction.js index.js",
+    "start": "nodemon dist/index.js",
+    "dev": "nodemon src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "luxon": "^3.5.0",
+    "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/luxon": "^3.4.2",
+    "@typescript-eslint/eslint-plugin": "^8.2.0",
+    "@typescript-eslint/parser": "^8.2.0",
+    "eslint": "^9.9.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
